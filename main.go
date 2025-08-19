@@ -35,6 +35,13 @@ func main() {
 	commandsMap.register("register", handlerRegister)
 	commandsMap.register("reset", handlerReset)
 	commandsMap.register("users", handlerLogUsers)
+	commandsMap.register("agg", handlerAgg)
+	commandsMap.register("addfeed", middlewareLoggedIn(handlerAddFeed))
+	commandsMap.register("feeds", handlerFeeds)
+	commandsMap.register("follow", middlewareLoggedIn(handlerFollow))
+	commandsMap.register("following", middlewareLoggedIn(handlerFollowing))
+	commandsMap.register("unfollow", middlewareLoggedIn(handlerUnfollow))
+	commandsMap.register("browse", middlewareLoggedIn(handlerBrowse))
 
 	stdinArgs, err := getArgs()
 	if err != nil {
