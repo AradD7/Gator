@@ -3,7 +3,9 @@
 ## Prerequisites
 
 Make sure you have postgres and go installed. Check out the links below for installation guide:
+
 Go:         [Download and install](https://go.dev/doc/install)
+
 postgres:   [Download](https://www.postgresql.org/download/)
 
 ## Install
